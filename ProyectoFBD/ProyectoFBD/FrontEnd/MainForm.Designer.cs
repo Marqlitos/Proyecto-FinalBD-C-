@@ -25,6 +25,8 @@ namespace ProyectoFBD
 		private System.Windows.Forms.ToolTip toolTip1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblBienvenida;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.PictureBox pictureBox1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -60,13 +62,16 @@ namespace ProyectoFBD
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.label3 = new System.Windows.Forms.Label();
 			this.lblBienvenida = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.label1.Location = new System.Drawing.Point(644, 9);
+			this.label1.Location = new System.Drawing.Point(439, 9);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(331, 56);
 			this.label1.TabIndex = 23;
@@ -74,16 +79,16 @@ namespace ProyectoFBD
 			// 
 			// dateTimePicker1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(12, 12);
+			this.dateTimePicker1.Location = new System.Drawing.Point(12, 48);
 			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(272, 22);
+			this.dateTimePicker1.Size = new System.Drawing.Size(397, 22);
 			this.dateTimePicker1.TabIndex = 24;
 			// 
 			// btnLibros
 			// 
 			this.btnLibros.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnLibros.Image = ((System.Drawing.Image)(resources.GetObject("btnLibros.Image")));
-			this.btnLibros.Location = new System.Drawing.Point(87, 173);
+			this.btnLibros.Location = new System.Drawing.Point(168, 99);
 			this.btnLibros.Name = "btnLibros";
 			this.btnLibros.Size = new System.Drawing.Size(75, 63);
 			this.btnLibros.TabIndex = 27;
@@ -94,7 +99,7 @@ namespace ProyectoFBD
 			// 
 			this.btnPrestamos.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnPrestamos.Image = ((System.Drawing.Image)(resources.GetObject("btnPrestamos.Image")));
-			this.btnPrestamos.Location = new System.Drawing.Point(185, 173);
+			this.btnPrestamos.Location = new System.Drawing.Point(249, 99);
 			this.btnPrestamos.Name = "btnPrestamos";
 			this.btnPrestamos.Size = new System.Drawing.Size(75, 63);
 			this.btnPrestamos.TabIndex = 28;
@@ -105,7 +110,7 @@ namespace ProyectoFBD
 			// 
 			this.btnAlumnos.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
-			this.btnAlumnos.Location = new System.Drawing.Point(277, 173);
+			this.btnAlumnos.Location = new System.Drawing.Point(127, 168);
 			this.btnAlumnos.Name = "btnAlumnos";
 			this.btnAlumnos.Size = new System.Drawing.Size(75, 63);
 			this.btnAlumnos.TabIndex = 29;
@@ -115,7 +120,7 @@ namespace ProyectoFBD
 			// 
 			this.btnReportes.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
-			this.btnReportes.Location = new System.Drawing.Point(369, 173);
+			this.btnReportes.Location = new System.Drawing.Point(208, 168);
 			this.btnReportes.Name = "btnReportes";
 			this.btnReportes.Size = new System.Drawing.Size(75, 63);
 			this.btnReportes.TabIndex = 30;
@@ -125,7 +130,7 @@ namespace ProyectoFBD
 			// 
 			this.btnAdmin.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
-			this.btnAdmin.Location = new System.Drawing.Point(460, 173);
+			this.btnAdmin.Location = new System.Drawing.Point(87, 99);
 			this.btnAdmin.Name = "btnAdmin";
 			this.btnAdmin.Size = new System.Drawing.Size(75, 63);
 			this.btnAdmin.TabIndex = 31;
@@ -135,7 +140,7 @@ namespace ProyectoFBD
 			// 
 			this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-			this.btnCerrarSesion.Location = new System.Drawing.Point(12, 474);
+			this.btnCerrarSesion.Location = new System.Drawing.Point(12, 318);
 			this.btnCerrarSesion.Name = "btnCerrarSesion";
 			this.btnCerrarSesion.Size = new System.Drawing.Size(75, 63);
 			this.btnCerrarSesion.TabIndex = 32;
@@ -145,7 +150,7 @@ namespace ProyectoFBD
 			// 
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.label3.Location = new System.Drawing.Point(12, 46);
+			this.label3.Location = new System.Drawing.Point(384, 345);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(190, 36);
 			this.label3.TabIndex = 34;
@@ -154,18 +159,39 @@ namespace ProyectoFBD
 			// lblBienvenida
 			// 
 			this.lblBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblBienvenida.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblBienvenida.Location = new System.Drawing.Point(208, 46);
+			this.lblBienvenida.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.lblBienvenida.Location = new System.Drawing.Point(580, 345);
 			this.lblBienvenida.Name = "lblBienvenida";
 			this.lblBienvenida.Size = new System.Drawing.Size(190, 36);
 			this.lblBienvenida.TabIndex = 35;
+			// 
+			// label2
+			// 
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.label2.Location = new System.Drawing.Point(12, 9);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(386, 36);
+			this.label2.TabIndex = 36;
+			this.label2.Text = "Selecciona una Opción: ";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(482, 77);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(228, 227);
+			this.pictureBox1.TabIndex = 37;
+			this.pictureBox1.TabStop = false;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.WindowFrame;
-			this.ClientSize = new System.Drawing.Size(987, 549);
+			this.ClientSize = new System.Drawing.Size(782, 393);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblBienvenida);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.btnCerrarSesion);
@@ -178,6 +204,7 @@ namespace ProyectoFBD
 			this.Controls.Add(this.label1);
 			this.Name = "MainForm";
 			this.Text = "ProyectoFBD";
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
