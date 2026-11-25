@@ -1,0 +1,10 @@
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.csprojResolveAssemblyReference.cache
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormLogin.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.MainForm.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.csproj.GenerateResource.Cache
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\bin\Debug\ProyectoFBD.exe.config
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\bin\Debug\ProyectoFBD.exe
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\bin\Debug\ProyectoFBD.pdb
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\bin\Debug\MySql.Data.dll
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.exe
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.pdb
