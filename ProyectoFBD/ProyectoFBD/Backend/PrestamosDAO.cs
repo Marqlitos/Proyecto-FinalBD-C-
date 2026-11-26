@@ -21,7 +21,7 @@ namespace ProyectoFBD.Backend
 		public DataTable ListarPrestamosActivos()
 		{
 			DataTable tabla = new DataTable();
-			using (MySqlConnection conn = ConexionDB.ObtenerConexion())
+			using (MySqlConnection conn = ConexionBD.ObtenerConexion())
 			{
 				conn.Open();
 				string query = @"SELECT p.id_prestamo AS 'ID Préstamo',
@@ -51,7 +51,7 @@ namespace ProyectoFBD.Backend
 			if (string.IsNullOrWhiteSpace(matricula))
 				return null;
 
-			using (MySqlConnection conn = ConexionDB.ObtenerConexion())
+			using (MySqlConnection conn = ConexionBD.ObtenerConexion())
 			{
 				conn.Open();
 				string query = "SELECT nombre, apellidos, carrera, estado FROM alumnos WHERE matricula = @mat LIMIT 1;";
@@ -86,7 +86,7 @@ namespace ProyectoFBD.Backend
 				throw new InvalidOperationException("No hay una sesión de usuario activa.");
 			}
 
-			using (MySqlConnection conn = ConexionDB.ObtenerConexion())
+			using (MySqlConnection conn = ConexionBD.ObtenerConexion())
 			{
 				conn.Open();
 				using (MySqlCommand cmd = new MySqlCommand("sp_registrar_prestamo", conn))
@@ -122,7 +122,7 @@ namespace ProyectoFBD.Backend
 				throw new ArgumentException("Selecciona un préstamo activo de la tabla para devolver.");
 			}
 
-			using (MySqlConnection conn = ConexionDB.ObtenerConexion())
+			using (MySqlConnection conn = ConexionBD.ObtenerConexion())
 			{
 				conn.Open();
 				using (MySqlCommand cmd = new MySqlCommand("sp_registrar_devolucion", conn))

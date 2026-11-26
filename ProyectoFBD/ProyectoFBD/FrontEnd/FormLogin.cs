@@ -67,7 +67,7 @@ namespace ProyectoFBD.FrontEnd
 			if (respuesta == DialogResult.Yes)
 			{
 				MessageBox.Show("Sesion Cerrada, ¡Hasta luego!.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				Application.Exit();
+				this.Close();
 			}
 			else
 			{

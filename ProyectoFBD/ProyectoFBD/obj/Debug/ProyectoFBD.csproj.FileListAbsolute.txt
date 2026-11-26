@@ -1,4 +1,3 @@
-C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.csprojResolveAssemblyReference.cache
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormLogin.resources
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.MainForm.resources
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.csproj.GenerateResource.Cache
@@ -9,3 +8,11 @@ C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.exe
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.pdb
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormLibros.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormPrestamos.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.csproj.AssemblyReference.cache
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.csproj.CoreCompileInputs.cache
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\Proyecto.64CFA126.Up2Date
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormAlumnos.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormReportes.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.Properties.Resources.resources
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormAdmin.resources

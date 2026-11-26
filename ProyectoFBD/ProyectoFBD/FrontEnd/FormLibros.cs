@@ -113,7 +113,7 @@ namespace ProyectoFBD.FrontEnd
 			if (respuesta == DialogResult.Yes)
 			{
 				MessageBox.Show("Ventana Cerrada, ¡Hasta luego!.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				Application.Exit();
+				this.Close();
 			}
 			else
 			{

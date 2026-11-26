@@ -65,14 +65,28 @@ namespace ProyectoFBD
         }
 		void BtnPrestamosClick(object sender, EventArgs e)
 		{
-	
+			ProyectoFBD.FrontEnd.FormPrestamos frm = new ProyectoFBD.FrontEnd.FormPrestamos();
+    		frm.ShowDialog();
 		}
 		void Label1Click(object sender, EventArgs e)
 		{
 	
 		}
-        
-        
-        
+
+        private void btnAlumnos_Click(object sender, EventArgs e)
+        {
+            ProyectoFBD.FrontEnd.FormAlumnos frm = new ProyectoFBD.FrontEnd.FormAlumnos();
+            frm.ShowDialog();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            new ProyectoFBD.FrontEnd.FormReportes().ShowDialog();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            new ProyectoFBD.FrontEnd.FormAdmin().ShowDialog();
+        }
     }
 }
