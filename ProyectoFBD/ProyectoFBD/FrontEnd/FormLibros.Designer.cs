@@ -25,11 +25,16 @@ namespace ProyectoFBD.FrontEnd
 		private System.Windows.Forms.TextBox txtAutor;
 		private System.Windows.Forms.TextBox txtEditorial;
 		private System.Windows.Forms.TextBox txtCategoria;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown numTotal;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.NumericUpDown numericUpDown2;
+		private System.Windows.Forms.NumericUpDown numDisponible;
 		private System.Windows.Forms.Button btnGuardar;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.Button btnActualizar;
+		private System.Windows.Forms.Button btnLimpiar;
+		private System.Windows.Forms.Button btnCerrarSesion;
+		private System.Windows.Forms.DataGridView dgvLibros;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -52,6 +57,7 @@ namespace ProyectoFBD.FrontEnd
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLibros));
 			this.txtCodigoBarras = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -64,13 +70,19 @@ namespace ProyectoFBD.FrontEnd
 			this.txtAutor = new System.Windows.Forms.TextBox();
 			this.txtEditorial = new System.Windows.Forms.TextBox();
 			this.txtCategoria = new System.Windows.Forms.TextBox();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.numTotal = new System.Windows.Forms.NumericUpDown();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+			this.numDisponible = new System.Windows.Forms.NumericUpDown();
 			this.btnGuardar = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.btnActualizar = new System.Windows.Forms.Button();
+			this.btnLimpiar = new System.Windows.Forms.Button();
+			this.btnCerrarSesion = new System.Windows.Forms.Button();
+			this.dgvLibros = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.numTotal)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numDisponible)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtCodigoBarras
@@ -78,8 +90,10 @@ namespace ProyectoFBD.FrontEnd
 			this.txtCodigoBarras.Location = new System.Drawing.Point(295, 32);
 			this.txtCodigoBarras.MaxLength = 13;
 			this.txtCodigoBarras.Name = "txtCodigoBarras";
-			this.txtCodigoBarras.Size = new System.Drawing.Size(193, 22);
+			this.txtCodigoBarras.Size = new System.Drawing.Size(321, 22);
 			this.txtCodigoBarras.TabIndex = 0;
+			this.toolTip1.SetToolTip(this.txtCodigoBarras, "Ingresa el Codigo de Barras");
+			this.txtCodigoBarras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCodigoBarrasKeyDown);
 			// 
 			// label1
 			// 
@@ -95,11 +109,13 @@ namespace ProyectoFBD.FrontEnd
 			// 
 			this.btnBuscar.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-			this.btnBuscar.Location = new System.Drawing.Point(494, 12);
+			this.btnBuscar.Location = new System.Drawing.Point(622, 12);
 			this.btnBuscar.Name = "btnBuscar";
 			this.btnBuscar.Size = new System.Drawing.Size(75, 63);
 			this.btnBuscar.TabIndex = 33;
+			this.toolTip1.SetToolTip(this.btnBuscar, "Buscar Libro");
 			this.btnBuscar.UseVisualStyleBackColor = false;
+			this.btnBuscar.Click += new System.EventHandler(this.BtnBuscarClick);
 			// 
 			// label2
 			// 
@@ -135,7 +151,7 @@ namespace ProyectoFBD.FrontEnd
 			// 
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.SystemColors.Window;
-			this.label5.Location = new System.Drawing.Point(12, 168);
+			this.label5.Location = new System.Drawing.Point(321, 81);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(102, 23);
 			this.label5.TabIndex = 37;
@@ -147,6 +163,7 @@ namespace ProyectoFBD.FrontEnd
 			this.txtTitulo.Name = "txtTitulo";
 			this.txtTitulo.Size = new System.Drawing.Size(184, 22);
 			this.txtTitulo.TabIndex = 38;
+			this.toolTip1.SetToolTip(this.txtTitulo, "Ingresa el Titulo del Libro");
 			// 
 			// txtAutor
 			// 
@@ -154,6 +171,7 @@ namespace ProyectoFBD.FrontEnd
 			this.txtAutor.Name = "txtAutor";
 			this.txtAutor.Size = new System.Drawing.Size(184, 22);
 			this.txtAutor.TabIndex = 39;
+			this.toolTip1.SetToolTip(this.txtAutor, "Ingresa el Autor del Libro");
 			// 
 			// txtEditorial
 			// 
@@ -161,26 +179,43 @@ namespace ProyectoFBD.FrontEnd
 			this.txtEditorial.Name = "txtEditorial";
 			this.txtEditorial.Size = new System.Drawing.Size(184, 22);
 			this.txtEditorial.TabIndex = 40;
+			this.toolTip1.SetToolTip(this.txtEditorial, "Ingresa la Editorial ");
 			// 
 			// txtCategoria
 			// 
-			this.txtCategoria.Location = new System.Drawing.Point(120, 167);
+			this.txtCategoria.Location = new System.Drawing.Point(513, 81);
 			this.txtCategoria.Name = "txtCategoria";
 			this.txtCategoria.Size = new System.Drawing.Size(184, 22);
 			this.txtCategoria.TabIndex = 41;
+			this.toolTip1.SetToolTip(this.txtCategoria, "Ingresa la catagoria del Libro");
 			// 
-			// numericUpDown1
+			// numTotal
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(513, 83);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(184, 22);
-			this.numericUpDown1.TabIndex = 42;
+			this.numTotal.Location = new System.Drawing.Point(513, 111);
+			this.numTotal.Maximum = new decimal(new int[] {
+			500,
+			0,
+			0,
+			0});
+			this.numTotal.Minimum = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
+			this.numTotal.Name = "numTotal";
+			this.numTotal.Size = new System.Drawing.Size(184, 22);
+			this.numTotal.TabIndex = 42;
+			this.numTotal.Value = new decimal(new int[] {
+			1,
+			0,
+			0,
+			0});
 			// 
 			// label6
 			// 
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.SystemColors.Window;
-			this.label6.Location = new System.Drawing.Point(321, 82);
+			this.label6.Location = new System.Drawing.Point(321, 110);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(134, 23);
 			this.label6.TabIndex = 43;
@@ -190,40 +225,97 @@ namespace ProyectoFBD.FrontEnd
 			// 
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label7.ForeColor = System.Drawing.SystemColors.Window;
-			this.label7.Location = new System.Drawing.Point(321, 111);
+			this.label7.Location = new System.Drawing.Point(321, 139);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(186, 23);
 			this.label7.TabIndex = 45;
 			this.label7.Text = "Numero Disponible:";
 			// 
-			// numericUpDown2
+			// numDisponible
 			// 
-			this.numericUpDown2.Location = new System.Drawing.Point(513, 112);
-			this.numericUpDown2.Name = "numericUpDown2";
-			this.numericUpDown2.Size = new System.Drawing.Size(184, 22);
-			this.numericUpDown2.TabIndex = 44;
+			this.numDisponible.Location = new System.Drawing.Point(513, 140);
+			this.numDisponible.Maximum = new decimal(new int[] {
+			500,
+			0,
+			0,
+			0});
+			this.numDisponible.Name = "numDisponible";
+			this.numDisponible.Size = new System.Drawing.Size(184, 22);
+			this.numDisponible.TabIndex = 44;
 			// 
 			// btnGuardar
 			// 
 			this.btnGuardar.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-			this.btnGuardar.Location = new System.Drawing.Point(751, 12);
+			this.btnGuardar.Location = new System.Drawing.Point(718, 12);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(75, 63);
 			this.btnGuardar.TabIndex = 46;
+			this.toolTip1.SetToolTip(this.btnGuardar, "Guardar");
 			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
+			// 
+			// btnActualizar
+			// 
+			this.btnActualizar.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+			this.btnActualizar.Location = new System.Drawing.Point(718, 83);
+			this.btnActualizar.Name = "btnActualizar";
+			this.btnActualizar.Size = new System.Drawing.Size(75, 63);
+			this.btnActualizar.TabIndex = 47;
+			this.toolTip1.SetToolTip(this.btnActualizar, "Actualizar");
+			this.btnActualizar.UseVisualStyleBackColor = false;
+			this.btnActualizar.Click += new System.EventHandler(this.BtnActualizarClick);
+			// 
+			// btnLimpiar
+			// 
+			this.btnLimpiar.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
+			this.btnLimpiar.Location = new System.Drawing.Point(718, 152);
+			this.btnLimpiar.Name = "btnLimpiar";
+			this.btnLimpiar.Size = new System.Drawing.Size(75, 63);
+			this.btnLimpiar.TabIndex = 48;
+			this.toolTip1.SetToolTip(this.btnLimpiar, "Limpiar Casillas");
+			this.btnLimpiar.UseVisualStyleBackColor = false;
+			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
+			// 
+			// btnCerrarSesion
+			// 
+			this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ScrollBar;
+			this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+			this.btnCerrarSesion.Location = new System.Drawing.Point(718, 403);
+			this.btnCerrarSesion.Name = "btnCerrarSesion";
+			this.btnCerrarSesion.Size = new System.Drawing.Size(75, 63);
+			this.btnCerrarSesion.TabIndex = 49;
+			this.toolTip1.SetToolTip(this.btnCerrarSesion, "Cerrar Ventana");
+			this.btnCerrarSesion.UseVisualStyleBackColor = false;
+			this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesionClick);
+			// 
+			// dgvLibros
+			// 
+			this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvLibros.Location = new System.Drawing.Point(12, 180);
+			this.dgvLibros.Name = "dgvLibros";
+			this.dgvLibros.RowTemplate.Height = 24;
+			this.dgvLibros.Size = new System.Drawing.Size(685, 286);
+			this.dgvLibros.TabIndex = 50;
+			this.dgvLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLibrosCellContentClick);
 			// 
 			// FormLibros
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GrayText;
-			this.ClientSize = new System.Drawing.Size(838, 357);
+			this.ClientSize = new System.Drawing.Size(805, 478);
+			this.Controls.Add(this.dgvLibros);
+			this.Controls.Add(this.btnCerrarSesion);
+			this.Controls.Add(this.btnLimpiar);
+			this.Controls.Add(this.btnActualizar);
 			this.Controls.Add(this.btnGuardar);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.numericUpDown2);
+			this.Controls.Add(this.numDisponible);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.numericUpDown1);
+			this.Controls.Add(this.numTotal);
 			this.Controls.Add(this.txtCategoria);
 			this.Controls.Add(this.txtEditorial);
 			this.Controls.Add(this.txtAutor);
@@ -237,8 +329,9 @@ namespace ProyectoFBD.FrontEnd
 			this.Controls.Add(this.txtCodigoBarras);
 			this.Name = "FormLibros";
 			this.Text = "FormLibros";
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numTotal)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numDisponible)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

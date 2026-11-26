@@ -8,3 +8,4 @@ C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\bin\Debug\MySql.Data.dll
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.exe
 C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.pdb
+C:\Users\marco\OneDrive\Documents\SharpDevelop Projects\ProyectoFBD\ProyectoFBD\obj\Debug\ProyectoFBD.FrontEnd.FormLibros.resources
