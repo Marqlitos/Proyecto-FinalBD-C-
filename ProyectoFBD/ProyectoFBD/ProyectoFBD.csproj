@@ -56,6 +56,7 @@
     <Compile Include="Backend\AuthDAO.cs" />
     <Compile Include="Backend\ConexionBD.cs" />
     <Compile Include="Backend\LibrosDAO.cs" />
+    <Compile Include="Backend\PrestamosDAO.cs" />
     <Compile Include="FrontEnd\FormLibros.cs" />
     <Compile Include="FrontEnd\FormLibros.Designer.cs">
       <DependentUpon>FormLibros.cs</DependentUpon>
@@ -63,6 +64,10 @@
     <Compile Include="FrontEnd\FormLogin.cs" />
     <Compile Include="FrontEnd\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FormPrestamos.cs" />
+    <Compile Include="FrontEnd\FormPrestamos.Designer.cs">
+      <DependentUpon>FormPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm.cs" />
     <Compile Include="FrontEnd\MainForm.Designer.cs">
@@ -88,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FormPrestamos.resx">
+      <DependentUpon>FormPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
